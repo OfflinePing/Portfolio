@@ -1,0 +1,258 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 0;
+    background-color: #222;
+    color: #eee;
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 5px auto;
+    padding: 25px 25px 5px 50px;
+    background-color: #222;
+    border-radius: 25px;
+    box-shadow: 1px 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #222;
+    margin: 0 auto 20px;
+}
+
+.subtitle {
+    font-weight: 500;
+    margin-bottom: 75px;
+}
+
+.career {
+    margin-bottom: 200px;
+}
+
+.timeline {
+    position: relative;
+    top: 75px;
+    width: 75%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #2196F3;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #2196F3;
+    background-color: #222;
+}
+
+.dot:nth-child(1) {
+    left: 0;
+}
+
+.dot:nth-child(2) {
+    left: 30%;
+}
+
+.dot:nth-child(3) {
+    left: 100%;
+}
+
+.event {
+    position: absolute;
+    top: -50px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.dot:first-child {
+    margin-left: 0;
+}
+
+.dot:last-child {
+    margin-right: 0;
+}
+
+.event h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.event p {
+    margin-top: 35px;
+}
+
+section {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 170px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #222;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    color: #eee;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 20px;
+    display: none;
+}
+
+.card-back p {
+    font-size: 1.2rem;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1;
+    filter: blur(5px);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.card:hover::before {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.card:hover::after {
+    background-color: transparent;
+}
+
+.card:hover .card-back {
+    display: block;
+}
+
+.cards {
+    margin-left: 75px;
+    align-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    width: 70%;
+}
+
+.slider-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 0;
+    color: white;
+}
+
+.slider-label {
+    position: absolute;
+    right: 20%;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.slider-value {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.slider-input {
+    -webkit-appearance: none;
+    width: calc(100% - 150px);
+    height: 2px;
+    border-radius: 5px;
+    background-color: #636363;
+    outline: none;
+    margin: 0;
+}
+
+.slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #2196F3;
+    cursor: default;
+}
