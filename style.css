@@ -44,7 +44,7 @@ h1, h2, h3 {
 .timeline {
     position: relative;
     top: 75px;
-    width: 75%;
+    width: 90%;
     height: 2px;
     margin: 0 auto;
     background-color: #2196F3;
@@ -66,16 +66,24 @@ h1, h2, h3 {
 }
 
 .dot:nth-child(2) {
-    left: 30%;
+    left: 25%;
 }
 
 .dot:nth-child(3) {
-    left: 100%;
+    left: 50%;
+}
+
+.dot:nth-child(4) {
+    left: 75%;
+}
+
+.dot:nth-child(5) {
+    left: 95%;
 }
 
 .event {
     position: absolute;
-    top: -50px;
+    top: -45px;
     transform: translateX(-50%);
     left: 50%;
     width: 200px;
@@ -93,11 +101,11 @@ h1, h2, h3 {
 
 .event h2 {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .event p {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 section {
@@ -220,14 +228,14 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: 0;
     color: white;
 }
 
 .slider-label {
     position: absolute;
-    right: 20%;
+    right: 10%;
     font-size: 18px;
     white-space: nowrap;
 }
