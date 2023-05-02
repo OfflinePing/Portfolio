@@ -119,95 +119,57 @@ section {
 
 .card {
     position: relative;
-    width: 300px;
-    height: 170px;
+    height: 200px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: #222;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transform-style: preserve-3d;
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 25px;
-    transition: transform 0.6s;
+    margin-top: 30px;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+.card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    transition: opacity 0.6s;
+    opacity: 0;
 }
 
 .card:hover {
-    transform: rotateY(180deg);
+    flex: 5;
+    opacity: 1;
 }
 
-.card-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #222;
-    color: #eee;
-    transform: rotateY(180deg);
-    box-sizing: border-box;
-    padding: 20px;
-    display: none;
-}
-
-.card-back p {
-    font-size: 1.2rem;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    z-index: 1;
-    filter: blur(5px);
-}
-
-.card::after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background-color: transparent;
-    z-index: 2;
-}
-
-.card:hover::before {
-    background-color: rgba(0, 0, 0, 0.01);
-}
-
-.card:hover::after {
-    background-color: transparent;
-}
-
-.card:hover .card-back {
-    display: block;
+.card:hover p {
+    opacity: 1;
 }
 
 .cards {
-    margin-left: 75px;
     align-content: space-between;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    height: 20rem;
+    gap: 1rem;
+}
+
+.cards > div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.cards > div:hover {
+    flex: 5;
 }
 
 .slider-container {
@@ -235,9 +197,15 @@ section {
 
 .slider-label {
     position: absolute;
-    right: 10%;
+    right: 20%;
     font-size: 18px;
     white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .slider-label {
+        right: 8%;
+    }
 }
 
 .slider-value {
